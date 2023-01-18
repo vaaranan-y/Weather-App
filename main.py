@@ -2,6 +2,7 @@ import random
 from tkinter import *
 import requests
 import json
+import config
 #from PIL imageTK, Image
 
 # root is the basis of the window in this GUI application
@@ -22,7 +23,7 @@ def buttonFunction():
 	#Test
 	#signal["text"] = "Updated: " + str(random.randint(0,100))
 	#Toronto API
-	api_request = requests.get("https://api.weatherbit.io/v2.0/current?&city=Toronto,Ontario&key=e329732da2bd48a89a0691a66d9f8b37")
+	api_request = requests.get(config.api_key+config.api_secret)
 
         #Test API
 	#api_request = requests.get("https://api.openweathermap.org/data/2.5/weather?q=London&appid=ab4d2f4017ae0137e2abb88cc1b43fc0")
